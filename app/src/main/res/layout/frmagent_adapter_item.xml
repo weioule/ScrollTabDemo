@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="10dp"
+    android:orientation="vertical">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        app:riv_corner_radius_top_left="10dp"
+        app:riv_corner_radius_top_right="10dp"
+        tools:layout_height="200dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corners_white_10_bg"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:textColor="@color/txt_blank_color"
+            android:textSize="15sp"
+            tools:text="蛋黄肉粽" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginTop="2dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/gray_light"
+            android:textSize="11sp"
+            tools:text="当吃到蛋黄与鲜肉后，才知咸香入口的双重体验，能叫人如此回味" />
+
+        <TextView
+            android:id="@+id/tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_content"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/bg_tag_red"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingTop="2dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="2dp"
+            android:text="限时抢购"
+            android:textColor="#f00"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/cny"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tag"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="2dp"
+            android:text="¥"
+            android:textColor="#f00"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/cny"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/cny"
+            android:textColor="#f00"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            tools:text="19.90" />
+
+        <TextView
+            android:id="@+id/old_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_price"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="1dp"
+            android:layout_toRightOf="@+id/tv_price"
+            android:text="29.90"
+            android:textColor="#9c9c9c"
+            android:textSize="12sp"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/iv_shop_cart"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_below="@+id/tag"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="3dp"
+            android:src="@drawable/ic_shop_cart"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+</LinearLayout>

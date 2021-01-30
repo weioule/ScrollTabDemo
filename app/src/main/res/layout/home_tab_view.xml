@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/tab_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/txt_blank_color"
+        android:textSize="16sp"
+        tools:text="首页" />
+
+    <TextView
+        android:id="@+id/sub_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tab_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/green_radius_50_bg"
+        android:contentDescription="@null"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:textColor="@color/white_color"
+        android:textSize="12sp"
+        tools:text="推荐数据" />
+
+    <LinearLayout
+        android:id="@+id/tab_line_rl"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/background_color"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/tab_line"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:alpha="0"
+            android:background="@color/green" />
+
+    </LinearLayout>
+
+</RelativeLayout>
