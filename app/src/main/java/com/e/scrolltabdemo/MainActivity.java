@@ -182,7 +182,6 @@ public class MainActivity extends FragmentActivity {
     ScrollTabView.OnTabSelectListener onTabSelectListener = new ScrollTabView.OnTabSelectListener() {
         @Override
         public void onTabSelect(ScrollTabView.TabView tabView, int position) {
-            scrollToTop();
             mViewPager.setCurrentItem(position);
         }
     };
@@ -228,7 +227,6 @@ public class MainActivity extends FragmentActivity {
                 mFloatSearchRl.setVisibility(View.GONE);
             }
 
-
             int v = totalScrollRange + verticalOffse;
             if (v > 0) {
                 //展开时
@@ -243,9 +241,7 @@ public class MainActivity extends FragmentActivity {
         if (mTabView.isOpen()) {
             for (Fragment fragment : fragmentList) {
                 HomeFragment commodityFragment = (HomeFragment) fragment;
-                if (commodityFragment.getScrollY() > 0) {
-                    commodityFragment.scrollToPosition(0);
-                }
+                commodityFragment.scrollToPosition(0);
             }
         }
     }
