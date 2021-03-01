@@ -6,9 +6,9 @@
 下面是效果图：
 </br>
 ![image](https://github.com/weioule/ScrollTabDemo/blob/main/app/img/img11.jpg)&nbsp;&nbsp;
-![image](https://github.com/weioule/ScrollTabDemo/blob/main/app/img/img22.jpg)&nbsp;&nbsp;</br>
-![image](https://github.com/weioule/ScrollTabDemo/blob/main/app/img/img33.jpg)&nbsp;&nbsp;
-![image](https://github.com/weioule/ScrollTabDemo/blob/main/app/img/img44.jpg)&nbsp;&nbsp;</br>
+![image](https://github.com/weioule/ScrollTabDemo/blob/main/app/img/img22.jpg)&nbsp;&nbsp;
+![image](https://github.com/weioule/ScrollTabDemo/blob/main/app/img/img33.jpg)&nbsp;&nbsp;</br>
+![image](https://github.com/weioule/ScrollTabDemo/blob/main/app/img/img44.jpg)&nbsp;&nbsp;
 ![image](https://github.com/weioule/ScrollTabDemo/blob/main/app/img/img55.jpg)&nbsp;&nbsp;
 
 这里的核心是ScrollTabView，它是一个自定义控件，它在实现了TabLayout功能基础上添加了滑动效果处理，在我的当前首页架构上，要结合外层的AppBarLayout和内层RecyclerView的滚动调用它的notifyDataSetChanged函数实现。
