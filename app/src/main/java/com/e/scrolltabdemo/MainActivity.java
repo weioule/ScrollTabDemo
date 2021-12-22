@@ -1,7 +1,6 @@
 package com.e.scrolltabdemo;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.RelativeLayout;
 
@@ -211,7 +210,6 @@ public class MainActivity extends FragmentActivity {
             }
         }, 800);
     }
-
 
     private AppBarLayout.OnOffsetChangedListener offsetChangedListener = new AppBarLayout.OnOffsetChangedListener() {
 

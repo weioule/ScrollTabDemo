@@ -222,7 +222,12 @@ public class ScrollTabView extends HorizontalScrollView {
         }
     }
 
-
+    /**
+     * 刷新tabView的滑动效果
+     * @param scrollState
+     * @param alpha 线条与副标题的透明度调节
+     * @param scrollY 纵向滚动值，控制副标题下方的线条滑动
+     */
     public void notifyDataSetChanged(int scrollState, float alpha, int scrollY) {
         TabView child;
         final int tabCount = mTabLayout.getChildCount();
@@ -237,14 +242,14 @@ public class ScrollTabView extends HorizontalScrollView {
             if (3 == scrollState && item.getAlpha() == 0) return;
 
             item.setAlpha(alpha);
-            item.setVerticalOffse(scrollY / 2);
+            item.setVerticalOffse(scrollY);
 
             if (child.getItem().isSelected() || item.isSelected()) {
 
                 child.findViewById(R.id.tab_line).setAlpha(alpha);
                 ViewGroup line_rl = child.findViewById(R.id.tab_line_rl);
                 ViewGroup.LayoutParams layoutParams = line_rl.getLayoutParams();
-                layoutParams.height = Math.max(0, scrollY / 2);
+                layoutParams.height = Math.max(0, scrollY);
                 line_rl.setLayoutParams(layoutParams);
 
             } else {

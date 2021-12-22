@@ -14,6 +14,10 @@ public class Utils {
         return (int) (dpValue * scale + 0.5f);
     }
 
+    public static float dp2px(float dpValue) {
+        final float scale = Resources.getSystem().getDisplayMetrics().density;
+        return dpValue * scale + 0.5f;
+    }
 
     /**
      * 计算屏幕宽度 getScreenWidth
