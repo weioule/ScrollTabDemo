@@ -14,6 +14,10 @@ public class Utils {
         return (int) (dpValue * scale + 0.5f);
     }
 
+    public static float sp2px(float sp) {
+        final float scale = Resources.getSystem().getDisplayMetrics().scaledDensity;
+        return sp * scale + 0.5f;
+    }
 
     /**
      * 计算屏幕宽度 getScreenWidth
@@ -45,4 +49,14 @@ public class Utils {
         int resourceId = context.getResources().getIdentifier("status_bar_height", "dimen", "android");
         return context.getResources().getDimensionPixelSize(resourceId);
     }
+
+    /**
+     * 计算屏幕宽度 measureScreenWidth
+     */
+    public static int measureScreenWidth(Context context) {
+        DisplayMetrics metric = context.getResources().getDisplayMetrics();
+        int width = metric.widthPixels; // 屏幕宽度（像素）px
+        return width;
+    }
+
 }

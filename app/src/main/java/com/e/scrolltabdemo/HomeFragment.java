@@ -60,11 +60,11 @@ public class HomeFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        mRecyclerView = view.findViewById(R.id.recyclerView);
+        mRecyclerView = view.findViewById(R.id.recycler_view);
         FragmentAdapter adapter = new FragmentAdapter(list);
 
         View topPaddingView = new View(getContext());
-        topPaddingView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, Utils.dp2px(10)));
+        topPaddingView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, Utils.dp2px(8)));
         adapter.addHeaderView(topPaddingView);
 
         OffsetLinearLayoutManager layoutManager = new OffsetLinearLayoutManager();
@@ -98,6 +98,7 @@ public class HomeFragment extends Fragment {
     }
 
     public void scrollToPosition(int position) {
+        if (null == mRecyclerView) return;
         setScrollY(position);
         mRecyclerView.scrollToPosition(position);
     }

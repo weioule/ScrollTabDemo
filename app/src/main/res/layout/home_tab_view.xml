@@ -44,7 +44,7 @@
             android:layout_marginLeft="6dp"
             android:layout_marginRight="6dp"
             android:alpha="0"
-            android:background="@color/green" />
+            android:background="@color/theme_color" />
 
     </LinearLayout>
 

@@ -7,8 +7,8 @@ android {
         applicationId "com.e.scrolltabdemo"
         minSdkVersion 19
         targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -31,17 +31,19 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
 
-    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.google.android.material:material:1.1.0'
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
     implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
 
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.50'
     implementation 'com.github.yuruiyin:AppbarLayoutBehavior:v1.0.4'
-    implementation 'com.youth.banner:banner:2.0.11'
 
     implementation 'com.makeramen:roundedimageview:2.3.0'
     implementation 'com.github.Ye-Miao:StatusBarUtil:1.7.5'
 
     implementation 'com.scwang.smart:refresh-layout-kernel:2.0.1'
     implementation "com.scwang.smart:refresh-header-classics:2.0.1"
+
+    // Banner
+    implementation 'io.github.youth5201314:banner:2.2.2'
 }

@@ -7,8 +7,8 @@
         android:bottomRightRadius="50px"
         android:topLeftRadius="50px"
         android:topRightRadius="50px" />
-    <solid android:color="@color/green" />
+    <solid android:color="@color/theme_color" />
     <stroke
         android:width="0.5dp"
-        android:color="@color/green" />
+        android:color="@color/theme_color" />
 </shape>

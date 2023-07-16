@@ -190,7 +190,7 @@ public class ScrollTabView extends HorizontalScrollView {
             item.setSelected(isSelected);
 
             if (isSelected) {
-                tv_title.setTextColor(getContext().getResources().getColor(R.color.green));
+                tv_title.setTextColor(getContext().getResources().getColor(R.color.theme_color));
                 tv_subTitle.setTextColor(getContext().getResources().getColor(R.color.white_color));
                 tv_subTitle.setBackgroundResource(R.drawable.green_radius_50_bg);
 
@@ -237,14 +237,14 @@ public class ScrollTabView extends HorizontalScrollView {
             if (3 == scrollState && item.getAlpha() == 0) return;
 
             item.setAlpha(alpha);
-            item.setVerticalOffse(scrollY / 2);
+            item.setVerticalOffse(scrollY);
 
             if (child.getItem().isSelected() || item.isSelected()) {
 
                 child.findViewById(R.id.tab_line).setAlpha(alpha);
                 ViewGroup line_rl = child.findViewById(R.id.tab_line_rl);
                 ViewGroup.LayoutParams layoutParams = line_rl.getLayoutParams();
-                layoutParams.height = Math.max(0, scrollY / 2);
+                layoutParams.height = Math.max(0, scrollY);
                 line_rl.setLayoutParams(layoutParams);
 
             } else {
@@ -252,8 +252,8 @@ public class ScrollTabView extends HorizontalScrollView {
             }
 
             child.findViewById(R.id.sub_title).setAlpha(1 - alpha);
-            child.findViewById(R.id.sub_title).setTranslationY(scrollY / 4);
-            child.findViewById(R.id.tab_title).setTranslationY(scrollY / 4);
+            child.findViewById(R.id.sub_title).setTranslationY(scrollY / 2);
+            child.findViewById(R.id.tab_title).setTranslationY(scrollY / 2);
         }
     }
 

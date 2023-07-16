@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_category_list"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/white_bg_radius_10">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_category_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never" />
+
+        <RelativeLayout
+            android:id="@+id/rl_indicator_bg"
+            android:layout_width="25dp"
+            android:layout_height="3dp"
+            android:layout_below="@+id/rv_category_list"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/indicator_un_select_bg">
+
+            <View
+                android:id="@+id/indicator"
+                android:layout_width="13dp"
+                android:layout_height="3dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/indicator_selected_bg" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
