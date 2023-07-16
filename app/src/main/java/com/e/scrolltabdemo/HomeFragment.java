@@ -89,7 +89,8 @@ public class HomeFragment extends Fragment {
                 scrollY += dy;
 
                 if (mViewPager.getCurrentItem() == index) {
-                    mTabView.notifyDataSetChanged(scrollY < oldScrollY ? 1 : 2, Math.min(scrollY / 30f, 1), Math.min(scrollY, 30));
+                    //这里的参数2一定要传float类型，不然会影响滑动效果，参数3为线条滑动高度调节
+                    mTabView.notifyDataSetChanged(scrollY < oldScrollY ? 1 : 2, Math.min(scrollY / Utils.dp2px(10f), 1), Math.min(scrollY, Utils.dp2px(10)));
                 }
 
                 oldScrollY = scrollY;
@@ -100,6 +101,7 @@ public class HomeFragment extends Fragment {
     public void scrollToPosition(int position) {
         if (null == mRecyclerView) return;
         setScrollY(position);
-        mRecyclerView.scrollToPosition(position);
+        if (null != mRecyclerView)
+            mRecyclerView.scrollToPosition(position);
     }
 }

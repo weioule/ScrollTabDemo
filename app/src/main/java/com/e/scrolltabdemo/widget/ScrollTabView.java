@@ -222,7 +222,12 @@ public class ScrollTabView extends HorizontalScrollView {
         }
     }
 
-
+    /**
+     * 刷新tabView的滑动效果
+     * @param scrollState
+     * @param alpha 线条与副标题的透明度调节
+     * @param scrollY 纵向滚动值，控制副标题下方的线条滑动
+     */
     public void notifyDataSetChanged(int scrollState, float alpha, int scrollY) {
         TabView child;
         final int tabCount = mTabLayout.getChildCount();
